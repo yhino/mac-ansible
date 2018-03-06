@@ -8,8 +8,7 @@ homebrew_cask_packages:
   - alfred
   - appcleaner
   - bartender
-  - bettertouchtool
-  - burn
+  - bettertouchtool - burn
   - coteditor
   - docker
   - dropbox
@@ -42,6 +41,7 @@ homebrew_cask_packages:
   - quicklook-json
   - betterzipql
   - quicklook-csv
+  - qlstephen
 # fonts
   - font-andale-mono
   - font-cica
