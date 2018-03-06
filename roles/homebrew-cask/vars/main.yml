@@ -8,7 +8,8 @@ homebrew_cask_packages:
   - alfred
   - appcleaner
   - bartender
-  - bettertouchtool - burn
+  - bettertouchtool
+  - burn
   - coteditor
   - docker
   - dropbox
