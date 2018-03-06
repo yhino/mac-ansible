@@ -1,0 +1,52 @@
+---
+homebrew_cask_taps:
+  - caskroom/cask
+  - caskroom/fonts
+
+homebrew_cask_packages:
+# applications
+  - alfred
+  - appcleaner
+  - bartender
+  - bettertouchtool
+  - burn
+  - coteditor
+  - docker
+  - dropbox
+  - evernote
+  - firefox
+  - forklift
+  - google-chrome
+  - google-japanese-ime
+  - hyperswich
+  - istat-menus
+  - iterm2
+  - kap
+  - karabiner-elements
+  - kindle
+  - onyx
+  - paste
+  - popclip
+  - skitch
+  - slack
+  - the-unarchiver
+  - timemachineeditor
+  - tripmode
+  - virtualbox
+  - vlc
+  - wifi-explorer
+  - wireshark
+# quicklook
+  - qlmarkdown
+  - qlcolorcode
+  - quicklook-json
+  - betterzipql
+  - quicklook-csv
+# fonts
+  - font-andale-mono
+  - font-cica
+  - font-consolas-for-powerline
+  - font-fantasquesansmono-nerd-font-mono
+  - font-mononoki-nerd-font-mono
+  - font-rounded-m-plus
+  - font-ubuntu-mono-derivative-powerline

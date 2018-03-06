@@ -1,0 +1,9 @@
+---
+- name: Clone dotfiles
+  git:
+    repo: "{{ dotfiles_repo }}"
+    dest: "{{ dotfiles_local_path }}"
+
+- name: Bootstrapping dotfiles
+  command: cd {{ dotfiles_local_path }} && ./bootstrap.sh && cd -
+  notify: restart login-shell

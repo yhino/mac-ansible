@@ -1,0 +1,3 @@
+---
+dotfiles_repo: "git@github.com:yhinoz/dotfiles.git"
+dotfiles_local_path: "~/.dotfiles"

@@ -1,0 +1,18 @@
+homebrew_taps:
+
+homebrew_packages:
+  - axel
+  - ctags
+  - git
+  - go
+  - mycli
+  - openssl
+  - reattach-to-user-namespace
+  - the_silver_searcher
+  - tig
+  - tmux
+  - name: vim
+    install_options:
+      - with-luajit
+  - wget
+  - zsh

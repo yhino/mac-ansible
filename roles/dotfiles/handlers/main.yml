@@ -1,0 +1,4 @@
+---
+- name: restart login-shell
+  shell: >
+    exec $SHELL -l
