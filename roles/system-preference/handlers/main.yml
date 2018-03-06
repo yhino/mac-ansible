@@ -1,4 +1,4 @@
 ---
-- name: reload dock
+- name: restart dock
   shell: >
     killall Dock

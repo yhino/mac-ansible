@@ -1,0 +1,14 @@
+---
+- name: Show user library
+  command: chflags nohidden ~/Library/
+
+- name: Write user defaults system
+  osx_defaults: >
+    domain={{ item.domain }}
+    key={{ item.key }}
+    type={{ item.type }}
+    value={{ item.value }}
+  with_items:
+    - "{{ osx_defaults_preferences }}"
+  when: osx_defaults_preferences
+  notify: restart dock

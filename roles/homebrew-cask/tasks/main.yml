@@ -15,4 +15,3 @@
   with_items:
     - "{{ homebrew_cask_packages }}"
   when: homebrew_cask_packages
-  notify: reload dock

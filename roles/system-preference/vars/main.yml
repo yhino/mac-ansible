@@ -1,0 +1,22 @@
+---
+osx_defaults_preferences:
+  # finderを終了させる項目を表示する
+  - { domain: com.apple.finder, key: QuitMenuItem, type: bool, value: true }
+  # finderのタイトルにファイルパスを表示する
+  - { domain: com.apple.finder, key: _FXShowPosixPathInTitle, type: bool, value: true }
+    # QuickLookでテキスト選択可能にする
+  - { domain: com.apple.finder, key: QLEnableTextSelection, type: bool, value: true }
+    # Finderから離れた時にQuickLookウィンドウを非表示にする
+  - { domain: com.apple.finder, key: QLHidePanelOnDeactivate, type: bool, value: true }
+    # dockが隠れる速度を早くする
+  - { domain: com.apple.dock, key: autohide-delay, type: float,  value: 0 }
+    # exporseの動作を早くする
+  - { domain: com.apple.dock, key: expose-animation-duration, type: float, value: 0.15 }
+    # Dashboardを無効
+  - { domain: com.apple.dashboard, key: mcx-disabled, type: bool, value: true }
+    # ネットワーク接続時に.DS_Storeファイルの作成を抑制する
+  - { domain: com.apple.desktopservices, key: DSDontWriteNetworkStores, type: bool, value: true }
+    # USBに.DS_Storeファイルの作成を抑制する
+  - { domain: com.apple.desktopservices, key: DSDontWriteUSBStores, type: bool, value: true }
+    # スクリーンキャプチャで影を入れないようにする
+  - { domain: com.apple.screencapture, key: disable-shadow, type: bool, value: true }
