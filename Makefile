@@ -4,6 +4,10 @@ setup:
 	brew install ansible
 	exec $(SHELL) -l
 
+lint:
+	ansible-playbook -i inventory/local default.yml --syntax-check -vv
+	ansible-playbook -i inventory/local default.yml --list-tasks -vv
+
 check:
 	ansible-playbook -i inventory/local default.yml --check -vv
 
