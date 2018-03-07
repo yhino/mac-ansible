@@ -1,15 +1,30 @@
-setup:
+ANSIBLE_COMMAND   = ansible-playbook
+ANSIBLE_INVENTORY = inventory/local
+ANSIBLE_PLAYBOOK  = default.yml
+
+.PHONY: all
+
+all: pre-install install
+
+pre-install: pre-install-homebrew pre-install-ansible
+
+pre-install-homebrew:
+ifeq ($(shell which brew),)
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+endif
+
+pre-install-ansible:
+ifeq ($(shell which ansible-playbook),)
 	brew update
 	brew install ansible
-	exec $(SHELL) -l
+	hash -r
+endif
 
 lint:
-	ansible-playbook -i inventory/local default.yml --syntax-check -vv
-	ansible-playbook -i inventory/local default.yml --list-tasks -vv
+	$(ANSIBLE_COMMAND) -i $(ANSIBLE_INVENTORY) $(ANSIBLE_PLAYBOOK) --syntax-check -vv
 
 check:
-	ansible-playbook -i inventory/local default.yml --check -vv
+	$(ANSIBLE_COMMAND) -i $(ANSIBLE_INVENTORY) $(ANSIBLE_PLAYBOOK) --check -vv
 
 install:
-	ansible-playbook -i inventory/local default.yml -vv
+	$(ANSIBLE_COMMAND) -i $(ANSIBLE_INVENTORY) $(ANSIBLE_PLAYBOOK) -vv
