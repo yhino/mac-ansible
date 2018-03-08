@@ -40,7 +40,7 @@ homebrew_cask_packages:
   - qlmarkdown
   - qlcolorcode
   - quicklook-json
-  - betterzipql
+  - betterzip
   - quicklook-csv
   - qlstephen
 # fonts
