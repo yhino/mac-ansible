@@ -1,22 +1,103 @@
 ---
 osx_defaults_preferences:
-  # finderを終了させる項目を表示する
+    # ---------------------------------------------------------------------------
+    # Keyboard
+    # ---------------------------------------------------------------------------
+    # KeyRepeatするまでの時間
+  - { domain: NSGlobalDomain, key: InitialKeyRepeat, type: int, value: 15 }
+    # KeyRepeat
+  - { domain: NSGlobalDomain, key: KeyRepeat, type: int, value: 3 }
+
+    # ---------------------------------------------------------------------------
+    # Trackpad
+    # ---------------------------------------------------------------------------
+    # タップでクリック
+  - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: Clicking, type: bool, value: true }
+  - { domain: NSGlobalDomain, key: com.apple.mouse.tapBehavior, type: int, value: 1 }
+  - { domain: NSGlobalDomain, key: com.apple.mouse.tapBehavior, type: int, value: 1, host: currentHost }
+    # 右下クリックで、副クリック
+  - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: TrackpadCornerSecondaryClick, type: int, value: 2 }
+  - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: TrackpadRightClick, type: bool, value: true }
+  - { domain: NSGlobalDomain, key: com.apple.trackpad.tapBehavior.trackpadCornerClickBehavior, type: int, value: 1, host: currentHost }
+  - { domain: NSGlobalDomain, key: com.apple.trackpad.tapBehavior.enableSecondaryClick, type: bool, value: true, host: currentHost }
+
+    # ---------------------------------------------------------------------------
+    # Finder
+    # ---------------------------------------------------------------------------
+    # 全ての拡張子を表示する
+  - { domain: NSGlobalDomain, key: AppleShowAllExtensions, type: bool, value: true }
+    # デフォルトでホームディレクトリを開く
+  - { domain: com.apple.finder, key: NewWindowTarget, type: string, value: "PfHm" }
+  - { domain: com.apple.finder, key: NewWindowTargetPath, type: string, value: "file://${HOME}/" }
+    # ステータスバー表示
+  - { domain: com.apple.finder, key: ShowStatusBar, type: bool, value: true }
+    # パスバー表示
+  - { domain: com.apple.finder, key: ShowPathBar, type: bool, value: true }
+    # 隠しファイルをfinder上で表示しない
+  - { domain: com.apple.finder, key: AppleShowAllFiles, type: bool, value: false }
+    # finderを終了させる項目を表示する
   - { domain: com.apple.finder, key: QuitMenuItem, type: bool, value: true }
-  # finderのタイトルにファイルパスを表示する
+    # finderのタイトルにファイルパスを表示する
   - { domain: com.apple.finder, key: _FXShowPosixPathInTitle, type: bool, value: true }
+
+    # ---------------------------------------------------------------------------
+    # QuickLook
+    # ---------------------------------------------------------------------------
     # QuickLookでテキスト選択可能にする
   - { domain: com.apple.finder, key: QLEnableTextSelection, type: bool, value: true }
     # Finderから離れた時にQuickLookウィンドウを非表示にする
   - { domain: com.apple.finder, key: QLHidePanelOnDeactivate, type: bool, value: true }
+
+    # ---------------------------------------------------------------------------
+    # Dock
+    # ---------------------------------------------------------------------------
+    # dockを自動的に隠す
+  - { domain: com.apple.dock, key: autohide, type: bool,  value: true }
     # dockが隠れる速度を早くする
   - { domain: com.apple.dock, key: autohide-delay, type: float,  value: 0 }
-    # exporseの動作を早くする
-  - { domain: com.apple.dock, key: expose-animation-duration, type: float, value: 0.15 }
+    # dockアイコンサイズを設定
+  - { domain: com.apple.dock, key: tilesize, type: float,  value: 32 }
+    # dock拡大サイズを設定
+  - { domain: com.apple.dock, key: largesize, type: float,  value: 82 }
+    # dockの拡大機能をON
+  - { domain: com.apple.dock, key: magnification, type: bool,  value: true }
+    # Dockに標準で入っている全てのアプリを消す
+  - { domain: com.apple.dock, key: persistent-apps, type: array, value: [] }
+
+    # ---------------------------------------------------------------------------
+    # Dashboard/Exporse/MissionControl
+    # ---------------------------------------------------------------------------
     # Dashboardを無効
   - { domain: com.apple.dashboard, key: mcx-disabled, type: bool, value: true }
+    # exporseの動作を早くする
+  - { domain: com.apple.dock, key: expose-animation-duration, type: float, value: 0.15 }
+
+    # ---------------------------------------------------------------------------
+    # Safari
+    # ---------------------------------------------------------------------------
+    # 開発メニューを表示
+  - { domain: com.apple.Safari, key: com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled, type: bool, value: true }
+    # デバッグメニューを表示
+  - { domain: com.apple.Safari, key: IncludeDevelopMenu, type: bool, value: true }
+    # アドレスバーに完全なURLを表示
+  - { domain: com.apple.Safari, key: ShowFullURLInSmartSearchField, type: bool, value: true }
+    # コンテキストメニューにWebインスペクタを追加
+  - { domain: NSGlobalDomain, key: WebKitDeveloperExtras, type: bool, value: true }
+    # ステータスバー表示
+  - { domain: com.apple.Safari, key: ShowStatusBar, type: bool, value: true }
+
+    # ---------------------------------------------------------------------------
+    # misc.
+    # ---------------------------------------------------------------------------
     # ネットワーク接続時に.DS_Storeファイルの作成を抑制する
-  - { domain: com.apple.desktopservices, key: DSDontWriteNetworkStores, type: bool, value: true }
+  - { domain: com.apple.desktopservices, key: DSDontWriteNetworkStores, type: string, value: True }
     # USBに.DS_Storeファイルの作成を抑制する
   - { domain: com.apple.desktopservices, key: DSDontWriteUSBStores, type: bool, value: true }
     # スクリーンキャプチャで影を入れないようにする
   - { domain: com.apple.screencapture, key: disable-shadow, type: bool, value: true }
+    # デバイス接続時にアプリを立ち上げない
+  - { domain: com.apple.ImageCapture, key: disableHotPlug, type: bool, value: false }
+    # 未確認のアプリケーションを実行する際のダイアログを無効化
+  - { domain: com.apple.LaunchServices, key: LSQuarantine, type: bool, value: false }
+    # 印刷が終わったらプリンターアプリを終了する
+  - { domain: com.apple.print.PrintingPrefs, key: "Quit When Finished", type: bool, value: true }
