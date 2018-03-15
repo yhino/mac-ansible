@@ -15,7 +15,6 @@ homebrew_cask_packages:
   - dropbox
   - evernote
   - firefox
-  - forklift
   - google-chrome
   - google-japanese-ime
   - hyperswich
@@ -25,8 +24,6 @@ homebrew_cask_packages:
   - karabiner-elements
   - kindle
   - onyx
-  - paste
-  - popclip
   - skitch
   - slack
   - the-unarchiver
