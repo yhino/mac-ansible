@@ -20,6 +20,7 @@ homebrew_cask_packages:
   - hyperswich
   - istat-menus
   - iterm2
+  - java
   - kap
   - karabiner-elements
   - kindle
