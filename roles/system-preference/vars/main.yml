@@ -63,6 +63,8 @@ osx_defaults_preferences:
   - { domain: com.apple.dock, key: magnification, type: bool,  value: true }
     # Dockに標準で入っている全てのアプリを消す
   - { domain: com.apple.dock, key: persistent-apps, type: array, value: [] }
+    # 最近使ったアプリをDockに表示しない
+  - { domain: com.apple.dock, key: "show-recents", type: bool, value: false }
 
     # ---------------------------------------------------------------------------
     # Dashboard/Exporse/MissionControl
