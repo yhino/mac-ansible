@@ -8,8 +8,6 @@ homebrew_cask_packages:
   - alfred
   - appcleaner
   - bartender
-  - bettertouchtool
-  - burn
   - coteditor
   - docker
   - dropbox
@@ -17,7 +15,6 @@ homebrew_cask_packages:
   - firefox
   - google-chrome
   - google-japanese-ime
-  - hyperswich
   - istat-menus
   - iterm2
   - java
@@ -30,10 +27,6 @@ homebrew_cask_packages:
   - the-unarchiver
   - timemachineeditor
   - tripmode
-  - virtualbox
-  - vlc
-  - wifi-explorer
-  - wireshark
 # quicklook
   - qlmarkdown
   - qlcolorcode

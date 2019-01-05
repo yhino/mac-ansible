@@ -3,7 +3,7 @@
   connection: local
   become: no
   roles:
-    - homebrew
     - homebrew-cask
+    - homebrew
     - dotfiles
     - system-preference

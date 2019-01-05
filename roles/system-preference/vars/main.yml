@@ -12,7 +12,7 @@ osx_defaults_preferences:
     # Trackpad
     # ---------------------------------------------------------------------------
     # タップでクリック
-  - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: Clicking, type: bool, value: true }
+  - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: Clicking, type: int, value: 1 }
   - { domain: NSGlobalDomain, key: com.apple.mouse.tapBehavior, type: int, value: 1 }
   - { domain: NSGlobalDomain, key: com.apple.mouse.tapBehavior, type: int, value: 1, host: currentHost }
     # 右下クリックで、副クリック
@@ -33,8 +33,8 @@ osx_defaults_preferences:
   - { domain: com.apple.finder, key: ShowStatusBar, type: bool, value: true }
     # パスバー表示
   - { domain: com.apple.finder, key: ShowPathBar, type: bool, value: true }
-    # 隠しファイルをfinder上で表示しない
-  - { domain: com.apple.finder, key: AppleShowAllFiles, type: bool, value: false }
+    # 隠しファイルをfinder上で表示する
+  - { domain: com.apple.finder, key: AppleShowAllFiles, type: bool, value: true }
     # finderを終了させる項目を表示する
   - { domain: com.apple.finder, key: QuitMenuItem, type: bool, value: true }
     # finderのタイトルにファイルパスを表示する
@@ -90,13 +90,13 @@ osx_defaults_preferences:
     # misc.
     # ---------------------------------------------------------------------------
     # ネットワーク接続時に.DS_Storeファイルの作成を抑制する
-  - { domain: com.apple.desktopservices, key: DSDontWriteNetworkStores, type: string, value: True }
+  - { domain: com.apple.desktopservices, key: DSDontWriteNetworkStores, type: bool, value: true }
     # USBに.DS_Storeファイルの作成を抑制する
   - { domain: com.apple.desktopservices, key: DSDontWriteUSBStores, type: bool, value: true }
     # スクリーンキャプチャで影を入れないようにする
   - { domain: com.apple.screencapture, key: disable-shadow, type: bool, value: true }
     # デバイス接続時にアプリを立ち上げない
-  - { domain: com.apple.ImageCapture, key: disableHotPlug, type: bool, value: false }
+  - { domain: com.apple.ImageCapture, key: disableHotPlug, type: bool, value: true }
     # 未確認のアプリケーションを実行する際のダイアログを無効化
   - { domain: com.apple.LaunchServices, key: LSQuarantine, type: bool, value: false }
     # 印刷が終わったらプリンターアプリを終了する
