@@ -7,6 +7,7 @@ homebrew_packages:
   - ctags
   - git
   - go
+  - dep
   - mycli
   - openssl
   - reattach-to-user-namespace
