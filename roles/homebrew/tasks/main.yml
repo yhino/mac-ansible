@@ -20,3 +20,4 @@
   with_items:
     - "{{ homebrew_packages }}"
   when: homebrew_packages
+  notify: add-shell-zsh

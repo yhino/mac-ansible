@@ -1,0 +1,6 @@
+---
+- name: add-shell-zsh
+  shell: >
+    if [ -z "$(grep \"$(brew --prefix)/bin/zsh\" /etc/shells)" ]; then \
+      echo "$(brew --prefix)/bin/zsh" >> /etc/shells \
+    fi
