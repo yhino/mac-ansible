@@ -1,8 +1,11 @@
 homebrew_taps:
   - anyenv/anyenv
+  - aws/tap
 
 homebrew_packages:
   - anyenv
+  - awscli
+  - aws-sam-cli
   - axel
   - ctags
   - git
