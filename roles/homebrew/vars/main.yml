@@ -11,7 +11,8 @@ homebrew_packages:
   - git
   - go
   - dep
-  - mycli
+  - htop
+  - lsd
   - openssl
   - reattach-to-user-namespace
   - the_silver_searcher
