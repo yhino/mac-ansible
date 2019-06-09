@@ -22,6 +22,7 @@ homebrew_cask_packages:
   - karabiner-elements
   - kindle
   - onyx
+  - pock
   - skitch
   - slack
   - the-unarchiver
