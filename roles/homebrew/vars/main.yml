@@ -1,6 +1,7 @@
 homebrew_taps:
   - anyenv/anyenv
   - aws/tap
+  - github/gh
 
 homebrew_packages:
   - anyenv
@@ -8,9 +9,10 @@ homebrew_packages:
   - aws-sam-cli
   - axel
   - ctags
+  - ffmpeg
+  - gh
   - git
   - go
-  - dep
   - htop
   - lsd
   - openssl
@@ -18,8 +20,7 @@ homebrew_packages:
   - the_silver_searcher
   - tig
   - tmux
-  - name: vim
-    install_options:
-      - with-luajit
+  - vim
+  - watch
   - wget
   - zsh

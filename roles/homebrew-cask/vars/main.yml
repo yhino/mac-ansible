@@ -1,8 +1,4 @@
 ---
-homebrew_cask_taps:
-  - caskroom/cask
-  - caskroom/fonts
-
 homebrew_cask_packages:
 # applications
   - alfred
@@ -26,9 +22,7 @@ homebrew_cask_packages:
   - skitch
   - slack
   - the-unarchiver
-  - timemachineeditor
   - tripmode
-  - typora
 # quicklook
   - qlmarkdown
   - qlcolorcode
@@ -40,8 +34,8 @@ homebrew_cask_packages:
   - font-andale-mono
   - font-cica
   - font-consolas-for-powerline
-  - font-fantasquesansmono-nerd-font-mono
-  - font-mononoki-nerd-font-mono
+  - font-fantasquesansmono-nerd-font
+  - font-mononoki-nerd-font
   - font-rounded-m-plus
   - font-ubuntu-mono-derivative-powerline
   - font-ubuntumono-nerd-font
