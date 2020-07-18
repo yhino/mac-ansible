@@ -14,12 +14,12 @@ homebrew_packages:
   - git
   - go
   - htop
-  - lsd
   - openssl
   - reattach-to-user-namespace
   - the_silver_searcher
   - tig
   - tmux
+  - tree
   - vim
   - watch
   - wget
