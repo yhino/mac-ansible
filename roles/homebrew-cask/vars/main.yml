@@ -17,7 +17,6 @@ homebrew_cask_packages:
   - kap
   - karabiner-elements
   - kindle
-  - onyx
   - pock
   - skitch
   - slack
@@ -34,8 +33,8 @@ homebrew_cask_packages:
   - font-andale-mono
   - font-cica
   - font-consolas-for-powerline
-  - font-fantasquesansmono-nerd-font
+  - font-fantasque-sans-mono-nerd-font
   - font-mononoki-nerd-font
-  - font-rounded-m-plus
+  - font-rounded-mplus
   - font-ubuntu-mono-derivative-powerline
-  - font-ubuntumono-nerd-font
+  - font-ubuntu-mono-nerd-font
